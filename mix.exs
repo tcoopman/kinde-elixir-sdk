@@ -37,12 +37,11 @@ defmodule KindeSDK.Mixfile do
     [
       {:igniter, "~> 0.5", only: [:dev, :test]},
       {:tesla, "~> 1.4"},
-      {:poison, "~> 3.0"},
       {:ex_doc, "~> 0.28", only: :dev, runtime: false},
       {:plug, "~> 1.13"},
       {:plug_cowboy, "~> 2.0"},
       {:jason, "~> 1.3"},
-      {:httpoison, "~> 0.7"},
+      {:httpoison, "~> 2.0"},
       {:envar, "~> 1.1.0"},
       {:mock, "~> 0.3.0", only: :test},
       {:ssl_verify_fun, "~> 1.1.7"},
