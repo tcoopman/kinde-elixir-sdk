@@ -8,6 +8,7 @@ defmodule KindeSDK.Mixfile do
       elixir: "~> 1.10",
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
+      consolidate_protocols: Mix.env() != :dev,
       package: package(),
       aliases: aliases(),
       description: "Provides endpoints to manage your Kinde Businesses",
@@ -34,6 +35,7 @@ defmodule KindeSDK.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
+      {:igniter, "~> 0.5", only: [:dev, :test]},
       {:tesla, "~> 1.4"},
       {:poison, "~> 3.0"},
       {:ex_doc, "~> 0.28", only: :dev, runtime: false},
